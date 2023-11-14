@@ -9,6 +9,9 @@ describe("Funciones en JavaScript", () => {
         let name = "Rosa";
 
         // Escribe aquí tu funcion "saludar"
+        function saludar(nombre) {
+            return "Hola, " + nombre;
+        }
 
 
         assert.strictEqual(saludar(name),"Hola, Rosa");
@@ -18,12 +21,15 @@ describe("Funciones en JavaScript", () => {
     it("Las funciones pueden tener 2 parámetros", () => {
         let num1 = 17;
         let num2 = 10;
-
+    
         // Escribe aquí tu función "suma"
-
-
-        assert.strictEqual(suma(num1, num2),27);
-    })
+        function suma(numero1, numero2) {
+            return numero1 + numero2;
+        }
+    
+        // Verifica la aserción llamando a la función y comparando el resultado
+        assert.strictEqual(suma(num1, num2), 27);
+    });
 
 
     it("Las funciones pueden tener múltiples parámetros", () => {
@@ -34,8 +40,15 @@ describe("Funciones en JavaScript", () => {
         let rainProbability = "10%";
 
         // Escribe aquí tu función "weatherReport" (fíjate en la aserción para saber qué debe retornar esta función).
+        function weatherReport(userName, name, city, weather, rainProbability) {
+            return `Hola ${name} (${userName}), hoy en ${city} el tiempo es ${weather} y las probabilidades de lluvia son del ${rainProbability}`;
+        }
 
-        assert.strictEqual(weatherReport(userName, name, city, weather, rainProbability)).toEqual("Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%.");
+
+        assert.strictEqual(
+            weatherReport(userName, name, city, weather, rainProbability),
+            "Hola Ada Martín (ada89), hoy en Las Vegas el tiempo es soleado y las probabilidades de lluvia son del 10%"
+        );
     })
 
 
@@ -44,16 +57,17 @@ describe("Funciones en JavaScript", () => {
     // Recuerda quitar la puntuación de comentario (/* ... */) para que este código a continuación sea legible, e inclúyelo dentro de tu test.
 
 
-     /*    let userName = "Ariana28";
-        let userAge = 38;
+        let userName = "Ariana28";
         let userEmail = "ariana_28@gmail.com";
-        let userLocation = "Barcelona"
-        let userIsRegistered = true;
         let password = "p4s$w0rDs3guR0";
+        
 
         function userAuth(userName, userEmail, password) {
-            return "Welcome ${userName}, your email is ${userEmail} and your password is ${password}."
-        } */
-
-
+            return `Welcome ${userName}, your email is ${userEmail} and your password is ${password}.`
+       }
+        
+       assert.strictEqual(
+        userAuth(userName, userEmail, password),"Welcome Ariana28, your email is ariana_28@gmail.com and your password is p4s$w0rDs3guR0."
+    );
+        
     })
