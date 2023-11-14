@@ -4,8 +4,8 @@
   "description": "",
   "type":"module",
   "scripts": {
-    "test:basic": "node --test 01-variables.test.js",
-    "test":  "node --test --watch ./01-variables.test.js"
+    "test:basic": "node --test 02-conditionals.test.js",
+    "test":  "node --test --watch ./02-conditionals.test.js"
   },
   "keywords": [],
   "author": "",
